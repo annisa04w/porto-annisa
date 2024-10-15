@@ -1,0 +1,128 @@
+/* Mengatur styling umum untuk body dan container */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #ff8bbf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+}
+
+.container #check {
+    display: none;
+}
+
+.form {
+    padding: 40px;
+    text-align: center;
+}
+
+.form header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.form input[type="text"],
+.form input[type="email"], /* Added email type */
+.form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Transition for focus effect */
+}
+
+/* Focus effect */
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="password"]:focus {
+    border-color: #3498db; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.signup {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup label {
+    color: #3498db;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.signup label:hover {
+    color: #2980b9; /* Change color on hover */
+}
+
+/* Menyembunyikan form registration ketika checkbox tidak diceklis */
+#check:checked ~ .login {
+    display: none;
+}
+
+#check:checked ~ .registration {
+    display: block;
+}
+
+/* Menyembunyikan form login saat form registration aktif */
+.registration {
+    display: none;
+}
+
+/* Menambahkan sedikit animasi */
+.container .form {
+    animation: slide 0.6s forwards;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* Full width on small screens */
+    }
+}
+

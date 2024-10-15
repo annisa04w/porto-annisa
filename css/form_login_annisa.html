@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Form Login dan Registrasi</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="check">
+        <!-- Login Form -->
+        <div class="login form">
+            <header>Form Login</header>
+            <form action="/login" method="POST"> <!-- Update action URL -->
+                <input type="email" placeholder="Masukkan email" required aria-label="Email"> <!-- Added aria-label -->
+                <input type="password" placeholder="Masukkan Password" required aria-label="Password"> <!-- Added aria-label -->
+                <a href="#">Forgot Password?</a>
+                <input type="submit" value="Login" class="button">
+            </form> 
+            <div class="signup">
+                <span class="signup">Belum punya akun?
+                    <label for="check">Daftar</label>
+                </span>
+            </div>
+        </div>
+        <!-- Registration Form -->
+        <div class="registration form">
+            <header>Form Registrasi</header>
+            <form action="/register" method="POST"> <!-- Update action URL -->
+                <input type="email" placeholder="Masukkan Email" required aria-label="Email"> <!-- Added aria-label -->
+                <input type="password" placeholder="Masukkan Password" required aria-label="Password"> <!-- Added aria-label -->
+                <input type="password" placeholder="Masukkan Ulang Password" required aria-label="Repeat Password"> <!-- Added aria-label -->
+                <input type="submit" class="button" value="Daftar">
+            </form>
+            <div class="signup">
+                <span class="signup">Sudah punya akun?
+                    <label for="check">Login</label>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
